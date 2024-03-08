@@ -5,16 +5,13 @@
   --colors-blue50: #C6D6FF;
   --colors-blue100: #A6B8FF;
   --colors-blue150: #8594FF;
-  --colors-blue200: #6468FF;
-  --colors-blue300: #3E2DFF;
-  --colors-blue400: #3300FF;
-  --colors-blue500: #2700CD;
-  --colors-blue600: #1C00A1;
-  --colors-blue700: #13007A;
   --colors-blue800: #0A0057;
   --colors-blue900: #03003728;
   --colors-blue1000: #000019;
   --colors-gray-0: #c0c0c0;
+  --colors-white0: #fff;
+  --colors-rose0: #FF0072;
+
 
   background: linear-gradient(to right, var(--colors-blue0) 0%, var(--colors-blue100) 100%);
 
@@ -50,12 +47,58 @@ body {
   font-weight: bold;
   color: var(--colors-blue800);
 }
+
+.avatar-container{
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  width: 100%;
+  margin-right: 4rem;
+}
+
+.avatar-container img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+ .btn-primary{
+  background: var(--colors-rose0);
+    border-radius: 60px;
+    color: var(--colors-blue0);
+    font-weight: bold;
+    padding: 8px 18px;
+    border: none;
+ }
+
+ .btn-logout{
+  background: var(--colors-blue1000);
+  border-radius: 60px;
+  color: var(--colors-blue0);
+  font-weight: bold;
+  padding: 8px 18px;
+  border: none;
+  
+ }
+
+.container-logo{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-direction: row;
+}
 .toggle-btn{
   display: none;
+}
+
+.content-nav-mobile{
+  display: flex;
+    justify-content: space-between;
+    
 }
 .navbar-login {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .navbar{
@@ -85,9 +128,6 @@ body {
   border: 1px solid var(--colors-blue500);
 }
 
-.avatar-container img {
-  border-radius: 50%;
-}
 
   .logo{
     display: block;
@@ -105,25 +145,45 @@ body {
 /*Mobile */
 
 @media only screen and (max-width: 600px){
-  .container{
+  .container {
     display: block;
     background: var(--colors-blue0);
     border-color: transparent;
   }
-  .container-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .icon-navbar {
+    color: var(--colors-blue1000);
+    cursor: pointer;
   }
-  .toggle-btn{
+  
+  .toggle-btn {
     display: block;
+    background-color: var(--colors-blue0);
+    border: none;
   }
-  
-    .navbar-login {
-      display: flex;
-      align-items: center;
-      flex-direction: column-reverse;
-  
+
+  .content-nav-mobile {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 12;
+    width: 300px;
+    height: 100vh;
+    background: var(--colors-blue0);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in;
   }
-  
+
+  .navbar-login {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .active {
+    display: none;
+  }
 }

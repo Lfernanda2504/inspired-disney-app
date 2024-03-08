@@ -69,4 +69,13 @@
     width: 20%;
     }
   }
+
+  @media only screen and ( max-width: 425px){
+    .container-category .item{
+        display: flex;
+        flex-direction: column;
+        width: 271px;
+    }
+    
+  }
   
