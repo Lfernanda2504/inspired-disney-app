@@ -1,7 +1,8 @@
-
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Navbar} from './components';
 import { Home } from './pages'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const UserProfile = ()=> <h2> User </h2>
 

@@ -27,8 +27,8 @@
 body {
   margin: 0;
   width: 100%;
+  scroll-behavior: smooth;
   box-sizing: border-box;
-  overflow-x: hidden;
   font-family: var(--font-primary);
 }
 .container{
@@ -41,7 +41,6 @@ body {
   align-items: center;
   color: var(--colors-blue800);
   max-width: 992px;
-  padding: 15px;
   font-weight: bolder;
   margin: 0 auto;
 }
@@ -51,10 +50,16 @@ body {
   font-weight: bold;
   color: var(--colors-blue800);
 }
-
-.navbar {
+.toggle-btn{
+  display: none;
+}
+.navbar-login {
   display: flex;
   align-items: center;
+}
+
+.navbar{
+  display: none;
 }
 
 
@@ -68,7 +73,6 @@ body {
 .nav-list>li {
   margin-right: 20px;
 }
-
 
 
 .search-container{
@@ -85,6 +89,9 @@ body {
   border-radius: 50%;
 }
 
+  .logo{
+    display: block;
+  }
 
 .logo img {
   width: 70px;
@@ -92,4 +99,31 @@ body {
   vertical-align: middle;
   border-style: none;
 
+}
+
+/*********************************************************************************/
+/*Mobile */
+
+@media only screen and (max-width: 600px){
+  .container{
+    display: block;
+    background: var(--colors-blue0);
+    border-color: transparent;
+  }
+  .container-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle-btn{
+    display: block;
+  }
+  
+    .navbar-login {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+  
+  }
+  
 }

@@ -1,6 +1,11 @@
+import { Header } from "../../components";
+import { Category } from "../ContentCategory";
 
 const Home = () => {
-    return <div>Hola</div>;
+    return <div>
+        <Header />
+        <Category/>
+    </div>;
 }
 
 

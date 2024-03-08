@@ -1,0 +1,26 @@
+
+.header-slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.slick-slider {
+  width: 80%;
+  height: 340px;
+  padding: 1rem;
+}
+
+.slick-slider img{
+  border-radius: 30px;
+  width: 98%;
+  height: 300px;
+  object-fit: cover;
+}
+.slide-item:focus{
+  outline: none;
+}
+
+
+

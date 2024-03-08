@@ -1,35 +1,28 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import '../../styles/header-slider.css'
+
 
 const Header = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 20000,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
     return (
-        <div>
+        <div className="header-slider">
             <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
+                <div className="slide-item">
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/456A711C19899C881600F6247705E5253EB18C2471D75E5281E1FF6ACB6D2FBA/scale?width=1440&aspectRatio=1.78&format=jpeg"/>
                 </div>
-                <div>
-                    <h3>2</h3>
+                <div className="slide-item">
+                    <img src="https://disneyplusclone777.netlify.app/assets/images/slider-badging.jpg"/>
                 </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
+                <div className="slide-item">
+                    <img src="https://disneyplusclone777.netlify.app/assets/images/slider-badging.jpg"/>
                 </div>
             </Slider>
 
